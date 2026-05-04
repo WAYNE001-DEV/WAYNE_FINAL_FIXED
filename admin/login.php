@@ -60,7 +60,7 @@ $conn->close();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login — DISCOVER AND RE-WIND</title>
+<title>Admin Login — PASTIMES</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#070708; --card:#111; --gold:#c9a86c; --text:#e5e5e5; --muted:#666; --err:#e05252; --border:#222; --radius:8px; }
@@ -85,7 +85,7 @@ $conn->close();
 <div class="card">
   <div class="admin-badge">🔐 ADMIN ACCESS</div>
   <h1>Admin Login</h1>
-  <p class="subtitle">DISCOVER AND RE-WIND Administration Panel</p>
+  <p class="subtitle">PASTIMES Administration Panel</p>
 
   <?php if ($error): ?>
     <div class="alert"><?= htmlspecialchars($error) ?></div>
@@ -95,7 +95,7 @@ $conn->close();
     <div class="form-group">
       <label>Admin Email</label>
       <input type="email" name="email" value="<?= htmlspecialchars($stickyEmail) ?>"
-             placeholder="admin@discoverandrewind.co.za" required>
+             placeholder="admin@pastimes.co.za" required>
     </div>
     <div class="form-group">
       <label>Password</label>

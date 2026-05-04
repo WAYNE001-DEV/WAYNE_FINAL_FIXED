@@ -1,6 +1,6 @@
 <?php
 /**
- * createTable.php — DISCOVER AND RE-WIND
+ * createTable.php — PASTIMES
  * Student: [Your Name] | [Student Number]
  * Declaration: This code is my own work where not referenced.
  *
@@ -109,7 +109,7 @@ function showPage(array $msgs): void {
 <html lang='en'>
 <head>
 <meta charset='UTF-8'>
-<title>createTable.php — DISCOVER AND RE-WIND</title>
+<title>createTable.php — PASTIMES</title>
 <link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap' rel='stylesheet'>
 <style>
   body  { font-family:'DM Sans',sans-serif; background:#0f0f0f; color:#e5e5e5; padding:2.5rem; }

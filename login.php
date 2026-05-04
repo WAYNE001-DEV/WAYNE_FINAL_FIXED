@@ -80,7 +80,7 @@ $conn->close();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login — DISCOVER AND RE-WIND</title>
+<title>Login — PASTIMES</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -131,7 +131,7 @@ $conn->close();
 </head>
 <body>
 <nav>
-  <a href="index.php" class="logo">DISCOVER AND RE-WIND</a>
+  <a href="index.php" class="logo">PASTIMES</a>
   <div class="nav-links">
     <a href="index.php">Home</a>
     <a href="shop.php">Shop</a>
@@ -141,7 +141,7 @@ $conn->close();
 
 <div class="card">
   <h1>Welcome Back</h1>
-  <p class="subtitle">Login to your DISCOVER AND RE-WIND account</p>
+  <p class="subtitle">Login to your PASTIMES account</p>
 
   <?php if ($error): ?>
     <div class="alert"><?= htmlspecialchars($error) ?></div>

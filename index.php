@@ -1,6 +1,6 @@
 <?php
 /**
- * index.php — DISCOVER AND RE-WIND Home
+ * index.php — PASTIMES Home
  */
 session_start();
 ?>
@@ -9,7 +9,7 @@ session_start();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DISCOVER AND RE-WIND — Vintage Finds, Verified Sellers</title>
+<title>PASTIMES — Vintage Finds, Verified Sellers</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#0c0c0c; --gold:#c9a86c; --gold2:#e8c98a; --text:#e5e5e5; --muted:#888; --border:#2a2a2a; --radius:8px; }
@@ -53,7 +53,7 @@ session_start();
 </head>
 <body>
 <nav>
-  <a href="index.php" class="logo">DISCOVER AND RE-WIND</a>
+  <a href="index.php" class="logo">PASTIMES</a>
   <div class="nav-links">
     <a href="shop.php">Shop</a>
     <?php if (isset($_SESSION['userID'])): ?>
@@ -94,7 +94,7 @@ session_start();
 </div>
 
 <footer>
-  &copy; <?= date('Y') ?> DISCOVER AND RE-WIND — WEDE6021 POE Project
+  &copy; <?= date('Y') ?> PASTIMES — WEDE6021 POE Project
   &nbsp;|&nbsp; <a href="admin/login.php" style="color:var(--muted)">Admin</a>
 </footer>
 </body>

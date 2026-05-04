@@ -1,6 +1,6 @@
 <?php
 /**
- * admin/register.php — DISCOVER AND RE-WIND
+ * admin/register.php — PASTIMES
  * Registers a new admin account.
  * Requires a secret admin invite code to prevent public access.
  */
@@ -69,7 +69,7 @@ $conn->close();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Register — DISCOVER AND RE-WIND</title>
+<title>Admin Register — PASTIMES</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#070708;--card:#111;--gold:#c9a86c;--gold2:#e8c98a;--text:#e5e5e5;--muted:#666;--muted2:#999;--err:#e05252;--ok:#5cb85c;--border:#222;--border2:#2a2a2a;--r:8px;}
@@ -108,7 +108,7 @@ $conn->close();
 <div class="wrap">
   <div class="logo-row">
     <a href="../index.php" class="logo">
-      DISCOVER AND RE-WIND
+      PASTIMES
       <span>Administration Portal</span>
     </a>
   </div>

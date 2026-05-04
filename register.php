@@ -1,6 +1,6 @@
 <?php
 /**
- * register.php - DISCOVER AND RE-WIND
+ * register.php - PASTIMES
  * User chooses Buyer or Seller role at registration.
  * Status = 'pending' until admin approves.
  */
@@ -73,7 +73,7 @@ $provinces = ['Eastern Cape','Free State','Gauteng','KwaZulu-Natal',
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register — DISCOVER AND RE-WIND</title>
+<title>Register — PASTIMES</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#0c0c0c;--card:#161616;--gold:#c9a86c;--gold2:#e8c98a;--text:#e5e5e5;--muted:#888;--err:#e05252;--ok:#5cb85c;--border:#2a2a2a;--r:8px;--buyer:#4a90d9;--seller:#c9a86c;}
@@ -122,7 +122,7 @@ $provinces = ['Eastern Cape','Free State','Gauteng','KwaZulu-Natal',
 <body>
 <nav>
   <a href="index.php" class="logo">
-    DISCOVER AND RE-WIND
+    PASTIMES
     <span>Pre-loved fashion, rediscovered</span>
   </a>
   <div class="nav-links">
@@ -134,7 +134,7 @@ $provinces = ['Eastern Cape','Free State','Gauteng','KwaZulu-Natal',
 
 <div class="card">
   <h1>Create Account</h1>
-  <p class="subtitle">Join the DISCOVER AND RE-WIND community</p>
+  <p class="subtitle">Join the PASTIMES community</p>
 
   <?php if ($success): ?><div class="alert alert-ok"><?= $success ?></div><?php endif; ?>
   <?php if ($errors): ?>

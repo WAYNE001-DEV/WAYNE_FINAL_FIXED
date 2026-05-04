@@ -1,7 +1,7 @@
 <?php
 /**
  * DBConn.php
- * Database connection file for DISCOVER AND RE-WIND
+ * Database connection file for PASTIMES
  * Uses MySQLi improved connection
  */
 

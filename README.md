@@ -1,77 +1,117 @@
-# DISCOVER AND RE-WIND — ClothingStore
-### WEDE6021 POE — Part 2 Prototype
-### Setup: WAMP Server + phpMyAdmin + VS Code
+# 🛍️ PASTIMES — Online Clothing Store
+
+> A full-stack second-hand clothing marketplace built with PHP, MySQL, and WAMP.  
+> Browse, buy, and sell pre-loved clothing with ease.
 
 ---
 
-## Changes Made in This Version (vs previous zip)
+## 🎬 Video Demonstration
 
-| # | File | Change | Why (Rubric Requirement) |
-|---|------|--------|--------------------------|
-| 0 | `images/` (all 30) | **ADDED** — 30 real product photos matched to all DB clothing items | Images now display in shop for all 30 products |
-| 0b | `shop.php` | **FIXED** image display — shows real photo, falls back to placeholder if missing | Seller-uploaded images also display correctly |
-| 0c | `seller-products.php` | **FIXED** product list images — same fallback added | Consistent image handling |
-| 1 | `userData.txt` | **ADDED** — 5 tab-delimited users with MD5 passwords | Part 2 §2: text file with 5 fictitious entries |
-| 2 | `createTable.php` | **ADDED** — drops tblUser, recreates schema, loads userData.txt | Part 2 §2: createTable.php with DBConn include |
-| 3 | `images/jacket1.jpg` | **ADDED** — product image | Part 2 rubric: 5 JPG files in images/ |
-| 4 | `images/tshirt1.jpg` | **ADDED** — product image | Part 2 rubric: 5 JPG files in images/ |
-| 5 | `images/dress1.jpg` | **ADDED** — product image | Part 2 rubric: 5 JPG files in images/ |
-| 6 | `images/jeans1.jpg` | **ADDED** — product image | Part 2 rubric: 5 JPG files in images/ |
-| 7 | `images/shoes1.jpg` | **ADDED** — product image | Part 2 rubric: 5 JPG files in images/ |
-| 8 | `shop.php` | **ADDED** ShowCart button in nav bar | Part 2 rubric: ShowCart button required |
-| 9 | `shop.php` | **CHANGED** AddToCart to SVG picture/icon button | Part 2 rubric: picture button required |
-| 10 | `checkout.php` | **ADDED** order reference number (ORD-XXXXXX) on success | Part 2 rubric: orderNum reference shown |
-| 11 | `checkout.php` | **ADDED** session ID shown on success screen | Part 2 rubric: sessionId shown at checkout |
-| 12 | `checkout.php` | **ADDED** "Continue Shopping" button after checkout | Part 2 rubric: continue shopping option |
-| 13 | `dashboard.php` | **ADDED** seller shortcut card with "My Products" button | Seller UX — clear path to their listings |
-| 14 | `login.php` | **FIXED** sellers redirect to seller-products.php on login | Correct role-based routing |
-| 15 | `dashboard.php` | **FIXED** PHP operator precedence bug in seller nav link | Bug: `?? null === 'seller'` was always false |
+[![Watch the Demo](https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/l_cxsmPfGqs)
+
+**👉 https://youtu.be/l_cxsmPfGqs**
 
 ---
 
-## WAMP Setup Instructions
+## 💻 GitHub Repository
 
-### 1 — Copy project
+[![GitHub](https://img.shields.io/badge/GitHub-Ayanda001%2FWAYNE__FINAL__FIXED-black?style=for-the-badge&logo=github)](https://github.com/Ayanda001/WAYNE_FINAL_FIXED)
+
+**👉 https://github.com/Ayanda001/WAYNE_FINAL_FIXED**
+
+---
+
+## 👨‍💻 Developers
+
+| Name | Role | GitHub |
+|------|------|--------|
+| **Ayanda Maseko** | Software Developer | [@Ayanda001](https://github.com/Ayanda001) |
+| **Sabelo Dlomo** | Software Developer |  dlomosabelo977@gmail.com |
+
+> This project was designed and developed by Ayanda Maseko and Sabelo Dlomo as part of their software development coursework (WEDE6021 POE — Part 2 Prototype).
+
+---
+
+## 📋 Project Overview
+
+**PASTIMES** is a second-hand clothing e-commerce platform that allows:
+
+- 🛒 **Buyers** to browse listings, add items to cart, and place orders
+- 🏷️ **Sellers** to list clothing items with images, prices, and condition ratings
+- 🔐 **Admins** to manage users, verify accounts, and monitor the platform
+
+**Tech Stack:**
+- **Backend:** PHP (MySQLi)
+- **Database:** MySQL via phpMyAdmin
+- **Frontend:** HTML, CSS, JavaScript
+- **Server:** WAMP (Windows Apache MySQL PHP)
+- **Version Control:** Git + GitHub
+
+---
+
+## ⚙️ Setup Instructions (WAMP)
+
+### Step 1 — Install WAMP
+Download and install WAMP from [wampserver.com](https://www.wampserver.com).  
+Make sure the **tray icon is green** before proceeding.
+
+### Step 2 — Copy the Project
+Place the project folder inside your WAMP web root:
 ```
-C:\wamp64\www\WAYNE_FINAL\
+C:\wamp64\www\WAYNE_FINAL_FIXED\
 ```
 
-### 2 — Start WAMP
-Tray icon must be **green** before continuing.
+### Step 3 — Import the Database
+1. Open your browser and go to:
+   ```
+   http://localhost/phpmyadmin
+   ```
+2. Click **Import** in the top menu
+3. Click **Choose File** and select `myClothingStore.sql` from the project folder
+4. Click **Go** to import
 
-### 3 — Import database
-`http://localhost/phpmyadmin` → Import → choose `myClothingStore.sql` → Go
+> ✅ This creates the `ClothingStore` database with all tables and seed data.
 
-### 4 — Open site
+### Step 4 — Check Database Connection
+Open `DBConn.php` and confirm these settings match your WAMP setup:
+```php
+$host = 'localhost';
+$dbname = 'ClothingStore';
+$user = 'root';
+$pass = '';   // Leave empty for default WAMP
 ```
-http://localhost/WAYNE_FINAL/
+
+### Step 5 — Open the Site
+```
+http://localhost/WAYNE_FINAL_FIXED/
 ```
 
 ---
 
-## Login Credentials
+## 🔑 Login Credentials
 
-### Buyers (Active)
-| Email | Password |
-|-------|----------|
-| j.doe@abc.co.za | password1 |
-| j.smith@xyz.co.za | password2 |
-| t.nkosi@mail.co.za | password3 |
-| n.khumalo@wear.co.za | password7 |
+### 🛒 Buyer Accounts (Active)
+| Full Name | Email | Password |
+|-----------|-------|----------|
+| John Doe | j.doe@abc.co.za | password1 |
+| Jane Smith | j.smith@xyz.co.za | password2 |
+| Naledi Khumalo | n.khumalo@wear.co.za | password7 |
 
-### Sellers (Active)
-| Email | Password |
-|-------|----------|
-| l.dlamini@shop.co.za | password5 |
+### 🏷️ Seller Accounts (Active)
+| Full Name | Email | Password |
+|-----------|-------|----------|
+| Thabo Nkosi | t.nkosi@mail.co.za | password3 |
+| Lerato Dlamini | l.dlamini@shop.co.za | password5 |
+| Naledi Khumalo | n.khumalo@wear.co.za | password7 |
 
-### Pending (need admin approval first)
-| Email | Password | Role |
-|-------|----------|------|
-| a.maseko@web.co.za | password4 | Seller |
-| s.mthembu@clothe.co.za | password6 | Buyer |
-| d.vanwyk@store.co.za | password8 | Seller |
+### ⏳ Pending Accounts (Admin must verify first)
+| Full Name | Email | Password | Role |
+|-----------|-------|----------|------|
+| Ayanda Maseko | a.maseko@web.co.za | password4 | Seller |
+| Sipho Mthembu | s.mthembu@clothe.co.za | password6 | Buyer |
+| David van Wyk | d.vanwyk@store.co.za | password8 | Seller |
 
-### Admin Accounts
+### 🔐 Admin Accounts
 | Email | Password |
 |-------|----------|
 | admin@clothingstore.co.za | admin123 |
@@ -80,49 +120,101 @@ http://localhost/WAYNE_FINAL/
 | content@clothingstore.co.za | content123 |
 | finance@clothingstore.co.za | finance123 |
 
-**Admin panel:** `http://localhost/WAYNE_FINAL/admin/login.php`
-**Admin invite code:** `Ayanda_8`
+**Admin Panel URL:** `http://localhost/WAYNE_FINAL_FIXED/admin/login.php`  
+**Admin Invite Code:** `Ayanda_8`
 
 ---
 
-## All Pages
+## 🗂️ Pages & Features
 
-| URL | Description |
-|-----|-------------|
-| `/index.php` | Home page |
-| `/register.php` | Register as Buyer or Seller |
-| `/login.php` | Customer login — sellers go to seller-products, buyers to dashboard |
-| `/dashboard.php` | Account + order history + seller shortcut |
-| `/shop.php` | Browse, AddToCart (picture button), ShowCart, SellPrice popup |
-| `/checkout.php` | Place order — shows ORD-XXXXXX + session ID + Continue Shopping |
-| `/seller-products.php` | Upload and manage listings (sellers only) |
-| `/admin/login.php` | Admin login |
-| `/admin/register.php` | Register new admin (invite code: Ayanda_8) |
-| `/admin/index.php` | Admin panel: verify / add / update / delete users |
-
----
-
-## Part 2 Special Scripts
-
-**createTable.php** — drops and rebuilds tblUser from userData.txt:
-```
-http://localhost/WAYNE_FINAL/createTable.php
-```
-
-**loadClothingStore.php** — drops ALL tables and rebuilds everything:
-```
-http://localhost/WAYNE_FINAL/loadClothingStore.php?token=setup_DR2025
-```
-⚠️ Wipes all data. Use only to reset to defaults.
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | `/index.php` | Landing page with featured categories |
+| Register | `/register.php` | Sign up as a Buyer or Seller |
+| Login | `/login.php` | Role-based login — sellers go to their listings, buyers to dashboard |
+| Dashboard | `/dashboard.php` | View account info, order history, and seller shortcut |
+| Shop | `/shop.php` | Browse all listings, add to cart, view price popup |
+| Checkout | `/checkout.php` | Place order — shows order reference number and session ID |
+| Seller Products | `/seller-products.php` | Upload new items with images, manage existing listings |
+| Admin Login | `/admin/login.php` | Admin-only login |
+| Admin Panel | `/admin/index.php` | Verify users, manage accounts, view platform stats |
 
 ---
 
-## Troubleshooting
+## 🗃️ Database Structure
 
-| Problem | Fix |
-|---------|-----|
-| Blank page | WAMP tray must be green |
-| Connection failed | Check DBConn.php — DB_PASS should be empty for WAMP |
-| Page not found | Folder must be inside `C:\wamp64\www\` |
-| Can't login | Import myClothingStore.sql in phpMyAdmin first |
-| Pending users can't login | Admin must click Verify in admin panel |
+```
+ClothingStore
+├── tblUser       — Buyers and Sellers (role, status, province)
+├── tblAdmin      — Admin accounts
+├── tblClothes    — Product listings (title, price, image, condition)
+└── tblOrder      — Orders placed by buyers
+```
+
+**Foreign Key Order (important for seeding):**
+```
+tblAdmin → tblUser → tblClothes → tblOrder
+```
+
+---
+
+## 🔧 Special Setup Scripts
+
+### Reset Everything (Full Rebuild)
+Drops all tables and re-seeds from scratch:
+```
+http://localhost/WAYNE_FINAL_FIXED/loadClothingStore.php?token=setup_DR2025
+```
+⚠️ **Warning:** This wipes all data including orders and user accounts.
+
+### Rebuild Users Only
+Drops and rebuilds `tblUser` from `userData.txt`:
+```
+http://localhost/WAYNE_FINAL_FIXED/createTable.php
+```
+
+---
+
+## 🖼️ Product Images
+
+All product images are stored in the `/images/` folder and are named to match the database `imageFile` column. When a seller uploads a new product image it is saved automatically to `/images/` with a unique filename and linked to that listing in the database.
+
+If an image file is missing, the shop displays a fallback category emoji instead of a broken image.
+
+---
+
+## 🚀 Running With Git (VS Code)
+
+Clone the repo and run locally:
+```bash
+git clone https://github.com/Ayanda001/WAYNE_FINAL_FIXED.git
+cd WAYNE_FINAL_FIXED
+```
+
+To push future changes:
+```bash
+git add .
+git commit -m "Your commit message"
+git push origin main
+```
+
+---
+
+## 🐛 Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Blank white page | WAMP tray icon must be green (all services running) |
+| "Connection failed" error | Check `DBConn.php` — password should be empty for default WAMP |
+| "Page not found" (404) | Ensure the folder is inside `C:\wamp64\www\` |
+| Can't log in | Import `myClothingStore.sql` into phpMyAdmin first |
+| Pending users can't log in | Admin must click **Verify** in the admin panel |
+| FK constraint error on SQL import | Always import the full `myClothingStore.sql` — do not run partial INSERTs |
+| Images not showing | Check that the `images/` folder exists and contains the image files |
+
+---
+
+## 📄 License
+
+This project was built for educational purposes as part of the WEDE6021 module.  
+© 2025 Ayanda Maseko & Sabelo Dlomo — All rights reserved.

@@ -109,7 +109,7 @@ $provinces = ['Eastern Cape','Free State','Gauteng','KwaZulu-Natal',
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Panel — DISCOVER AND RE-WIND</title>
+<title>Admin Panel — PASTIMES</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#07070a; --card:#111318; --gold:#c9a86c; --text:#e5e5e5; --muted:#666; --border:#1e1e28; --radius:8px; }
