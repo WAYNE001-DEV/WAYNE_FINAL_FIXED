@@ -1,0 +1,5 @@
+John Doe	j.doe@abc.co.za	29ef52e7563626a96cea7f4b4085c124	Gauteng	1	active
+Jane Smith	j.smith@xyz.co.za	c6f057b86584942e415435ffb1fa93d4	Western Cape	1	active
+Thabo Nkosi	t.nkosi@mail.co.za	3c6e0b8a9c15224a8228b9a98ca1531d	KwaZulu-Natal	1	active
+Ayanda Maseko	a.maseko@web.co.za	1fed96d3b9b7a606bef61eefdb5e13dc	Gauteng	0	pending
+Lerato Dlamini	l.dlamini@shop.co.za	7f13e89f72a0d79ef84f059286b5e1a0	Limpopo	1	active
